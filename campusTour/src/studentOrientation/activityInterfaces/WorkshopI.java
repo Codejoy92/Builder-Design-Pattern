@@ -1,4 +1,4 @@
-package studentOrientation.util;
+package studentOrientation.activityInterfaces;
 
 public class WorkshopI {
 
