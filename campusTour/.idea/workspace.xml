@@ -11,11 +11,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Activities.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Activities.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/studentOrientation/util/Activities.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
               <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActivitiesEnum.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/studentOrientation/util/ActivitiesEnum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -87,6 +97,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -106,6 +117,7 @@
         <option value="$PROJECT_DIR$/src/studentOrientation/util/Activities.java" />
         <option value="$PROJECT_DIR$/src/studentOrientation/driver/Driver.java" />
         <option value="$PROJECT_DIR$/src/studentOrientation/activityInterfaces/WorkshopI.java" />
+        <option value="$PROJECT_DIR$/src/studentOrientation/util/ActivitiesEnum.java" />
       </list>
     </option>
   </component>
@@ -417,6 +429,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/studentOrientation/util/ActivitiesEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding />
         </state>
       </provider>
