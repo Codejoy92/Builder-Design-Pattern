@@ -1,5 +1,7 @@
 package studentOrientation.activityInterfaces;
 
-public class WorkshopI {
+public interface WorkshopI {
+	public void construct(ScheduleI createSchedule);
+	
 
 }
