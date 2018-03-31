@@ -120,8 +120,13 @@ public class Schedule implements ScheduleI {
 
 	@Override
 	public void createLecture() {
-		// TODO Auto-generated method stub
-
+        System.out.println();
+        Lecture lect = new Lecture();
+        System.out.println("Lecture: "+lecture);
+        lect.carbonFootprintUsed(lecture);
+        lect.costIncurred(lecture);
+        lect.durationSpent(lecture);
+        lect.effortUtilized(lecture);
 	}
 
 	@Override
@@ -133,7 +138,6 @@ public class Schedule implements ScheduleI {
         cafe.costIncurred(cafeteria);
         cafe.durationSpent(cafeteria);
         cafe.effortUtilized(cafeteria);
-
 	}
 
 }
