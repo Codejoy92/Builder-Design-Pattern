@@ -108,7 +108,13 @@ public class Schedule implements ScheduleI {
 
 	@Override
 	public void createGift() {
-		// TODO Auto-generated method stub
+        System.out.println();
+		Gift g = new Gift();
+        System.out.println("Gift: "+gift);
+        g.carbonFootprintUsed(gift);
+        g.costIncurred(gift);
+        g.durationSpent(gift);
+        g.effortUtilized(gift);
 
 	}
 
