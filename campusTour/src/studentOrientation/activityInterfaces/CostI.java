@@ -1,5 +1,7 @@
 package studentOrientation.activityInterfaces;
 
+import studentOrientation.util.ActivitiesEnum;
+
 public interface CostI {
-    double costIncurred();
+    void costIncurred(ActivitiesEnum activity);
 }

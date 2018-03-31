@@ -1,5 +1,7 @@
 package studentOrientation.activityInterfaces;
 
+import studentOrientation.util.ActivitiesEnum;
+
 public interface EffortI {
-    double effortUtilized();
+    void effortUtilized(ActivitiesEnum activity);
 }

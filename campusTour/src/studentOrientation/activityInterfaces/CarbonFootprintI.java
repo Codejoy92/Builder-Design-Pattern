@@ -1,5 +1,7 @@
 package studentOrientation.activityInterfaces;
 
+import studentOrientation.util.ActivitiesEnum;
+
 public interface CarbonFootprintI {
-    double carbonFootprintUsed();
+    void carbonFootprintUsed(ActivitiesEnum activity);
 }

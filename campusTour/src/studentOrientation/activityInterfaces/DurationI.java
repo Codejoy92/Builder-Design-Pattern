@@ -1,5 +1,7 @@
 package studentOrientation.activityInterfaces;
 
+import studentOrientation.util.ActivitiesEnum;
+
 public interface DurationI {
-    double durationSpent();
+    void durationSpent(ActivitiesEnum activity);
 }
