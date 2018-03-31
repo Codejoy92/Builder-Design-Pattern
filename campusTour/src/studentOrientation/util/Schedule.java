@@ -120,7 +120,13 @@ public class Schedule implements ScheduleI {
 
 	@Override
 	public void createCafeteria() {
-		// TODO Auto-generated method stub
+        System.out.println();
+		Cafeteria cafe = new Cafeteria();
+        System.out.println("Cafeteria: "+cafeteria);
+        cafe.carbonFootprintUsed(cafeteria);
+        cafe.costIncurred(cafeteria);
+        cafe.durationSpent(cafeteria);
+        cafe.effortUtilized(cafeteria);
 
 	}
 
