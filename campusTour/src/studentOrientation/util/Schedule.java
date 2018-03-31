@@ -9,6 +9,7 @@ public class Schedule implements ScheduleI {
 	private ActivitiesEnum gift;
 	private ActivitiesEnum building;
 
+<<<<<<< HEAD
 	public Schedule() {
 	}
 
@@ -27,6 +28,8 @@ public class Schedule implements ScheduleI {
 	public ActivitiesEnum getBuilding() {
 		return building;
 	}
+=======
+>>>>>>> cee0c1bbe6542bf94fad6f181b9d353cf3b11f9f
 
 	public Schedule(ActivitiesEnum value1, ActivitiesEnum value2, ActivitiesEnum value3, ActivitiesEnum value4) {
 
@@ -94,6 +97,30 @@ public class Schedule implements ScheduleI {
 	@Override
 	public void setBuilding(ActivitiesEnum buildingValue) {
 		building = buildingValue;
+	}
+	
+	@Override
+	public void createBuilding() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void createGift() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void createLecture() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void createCafeteria() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
