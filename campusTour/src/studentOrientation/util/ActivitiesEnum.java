@@ -8,5 +8,9 @@ public enum ActivitiesEnum {
     EVENTCENTER,
     UNIVERSITYUNION,
     CIW,
-    MOUNTAINVIEW;
+    MOUNTAINVIEW,
+	BUILDING,
+	CAFETERIA,
+	GIFT,
+	LECTURE;
 }
