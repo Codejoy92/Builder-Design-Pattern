@@ -8,6 +8,7 @@ public class Schedule implements ScheduleI {
 	private ActivitiesEnum lecture;
 	private ActivitiesEnum gift;
 	private ActivitiesEnum building;
+
 	public Schedule() {
 	}
 
@@ -38,6 +39,9 @@ public class Schedule implements ScheduleI {
 			setBuilding(value1);
 		} else if (value1 == ActivitiesEnum.CS240 || value1 == ActivitiesEnum.CS350) {
 			setLecture(value1);
+		} else {
+			System.out.println("invalid arugument 1");
+			System.exit(0);
 		}
 
 		// checking for value2
@@ -49,6 +53,9 @@ public class Schedule implements ScheduleI {
 			setBuilding(value2);
 		} else if (value2 == ActivitiesEnum.CS240 || value2 == ActivitiesEnum.CS350) {
 			setLecture(value2);
+		} else {
+			System.out.println("invalid arugument 2");
+			System.exit(0);
 		}
 
 		// checking for value3
@@ -60,6 +67,9 @@ public class Schedule implements ScheduleI {
 			setBuilding(value3);
 		} else if (value3 == ActivitiesEnum.CS240 || value3 == ActivitiesEnum.CS350) {
 			setLecture(value3);
+		} else {
+			System.out.println("invalid arugument 3");
+			System.exit(0);
 		}
 
 		// checking for value4
@@ -71,6 +81,9 @@ public class Schedule implements ScheduleI {
 			setBuilding(value4);
 		} else if (value4 == ActivitiesEnum.CS240 || value4 == ActivitiesEnum.CS350) {
 			setLecture(value4);
+		} else {
+			System.out.println("invalid arugument 4");
+			System.exit(0);
 		}
 
 	}
@@ -98,7 +111,7 @@ public class Schedule implements ScheduleI {
 	@Override
 	public void createBuilding() {
 		Building build = new Building();
-        System.out.println("Building: "+building);
+		System.out.println("Building: " + building);
 		build.carbonFootprintUsed(building);
 		build.costIncurred(building);
 		build.durationSpent(building);
@@ -108,36 +121,36 @@ public class Schedule implements ScheduleI {
 
 	@Override
 	public void createGift() {
-        System.out.println();
+		System.out.println();
 		Gift g = new Gift();
-        System.out.println("Gift: "+gift);
-        g.carbonFootprintUsed(gift);
-        g.costIncurred(gift);
-        g.durationSpent(gift);
-        g.effortUtilized(gift);
+		System.out.println("Gift: " + gift);
+		g.carbonFootprintUsed(gift);
+		g.costIncurred(gift);
+		g.durationSpent(gift);
+		g.effortUtilized(gift);
 
 	}
 
 	@Override
 	public void createLecture() {
-        System.out.println();
-        Lecture lect = new Lecture();
-        System.out.println("Lecture: "+lecture);
-        lect.carbonFootprintUsed(lecture);
-        lect.costIncurred(lecture);
-        lect.durationSpent(lecture);
-        lect.effortUtilized(lecture);
+		System.out.println();
+		Lecture lect = new Lecture();
+		System.out.println("Lecture: " + lecture);
+		lect.carbonFootprintUsed(lecture);
+		lect.costIncurred(lecture);
+		lect.durationSpent(lecture);
+		lect.effortUtilized(lecture);
 	}
 
 	@Override
 	public void createCafeteria() {
-        System.out.println();
+		System.out.println();
 		Cafeteria cafe = new Cafeteria();
-        System.out.println("Cafeteria: "+cafeteria);
-        cafe.carbonFootprintUsed(cafeteria);
-        cafe.costIncurred(cafeteria);
-        cafe.durationSpent(cafeteria);
-        cafe.effortUtilized(cafeteria);
+		System.out.println("Cafeteria: " + cafeteria);
+		cafe.carbonFootprintUsed(cafeteria);
+		cafe.costIncurred(cafeteria);
+		cafe.durationSpent(cafeteria);
+		cafe.effortUtilized(cafeteria);
 	}
 
 }
