@@ -24,7 +24,7 @@
         <mkdir dir="${BUILD}/jar"/>
         <jar destfile="${BUILD}/jar/campusTour.jar" basedir="${BUILD}/classes">
             <manifest>
-                <attribute name="Main-Class" value="campusTour.driver.Driver"/>
+                <attribute name="Main-Class" value="studentOrientation.driver.Driver"/>
             </manifest>
         </jar>
     </target>
