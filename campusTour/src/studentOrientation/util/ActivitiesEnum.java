@@ -1,7 +1,7 @@
 package studentOrientation.util;
 
 public enum ActivitiesEnum {
-    SOM_FOOT,
+    SOM_FOOT ,
     WATSON_FOOT,
     CS240_FOOT,
     CS350_FOOT,
