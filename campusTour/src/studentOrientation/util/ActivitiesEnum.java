@@ -20,3 +20,4 @@ public enum ActivitiesEnum {
     GIFT,
     LECTURE;
 }
+
