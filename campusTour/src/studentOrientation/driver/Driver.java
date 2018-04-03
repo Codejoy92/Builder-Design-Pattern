@@ -8,7 +8,8 @@ import studentOrientation.util.SchedulerWorkshop;
 
 public class Driver {
     public static void main(String[] args) {
-        ScheduleI createSchedule = new Schedule(ActivitiesEnum.CIW, ActivitiesEnum.CS240, ActivitiesEnum.UNIVERSITYUNION,ActivitiesEnum.WATSON);
+        ScheduleI createSchedule = new Schedule(ActivitiesEnum.MOUNTAINVIEW, ActivitiesEnum.CS350, ActivitiesEnum.UNIVERSITYUNION_BUS,
+                ActivitiesEnum.WATSON_BUS);
         WorkshopI schedule = new SchedulerWorkshop();
         schedule.construct(createSchedule);
     }

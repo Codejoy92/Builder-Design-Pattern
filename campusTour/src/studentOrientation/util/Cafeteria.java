@@ -1,45 +1,61 @@
 package studentOrientation.util;
 
-import static java.lang.Math.ceil;
 import static java.lang.Math.pow;
 
 public class Cafeteria extends Activities {
-
+    double co2consumed = Math.round(30*pow(10,-4) * 10000d)/10000d;
+    int effortCIW, effortMV, durationCIW = 30, durationMV = 45;
+    double surcharge = 2 + 2*0.05;
+    /**
+     * Calculates the Carbon Footprint for the activity
+     * @param activity
+     */
     @Override
     public void carbonFootprintUsed(ActivitiesEnum activity) {
-        if(ActivitiesEnum.CIW == activity)
-            System.out.println("CarbonFootprint: \t"+ceil(30*pow(10,-5)));
+        if(ActivitiesEnum.CIW_BUS == activity || ActivitiesEnum.CIW_FOOT == activity)
+            System.out.println("CarbonFootprint: \t"+co2consumed+" tonnes");
         else if(ActivitiesEnum.MOUNTAINVIEW == activity)
-            System.out.println("CarbonFootprint: \t"+ceil(45*pow(10,-5)));
+            System.out.println("CarbonFootprint: \t"+co2consumed+" tonnes");
     }
-
+    /**
+     * Calculates the cost associated with the activity
+     * @param activity
+     */
     @Override
     public void costIncurred(ActivitiesEnum activity) {
-        if (ActivitiesEnum.CIW == activity) {
-            System.out.print("Cost Associated:");
-            System.out.print("\tBy Bus: $2");
-            System.out.print("\tBy Foot: $1");
-        } else if (ActivitiesEnum.MOUNTAINVIEW == activity) {
-            System.out.print("Cost Associated:");
-            System.out.print("\tBy Bus: $1");
-            System.out.print("\tBy Foot: $0.5");
-        }
+        System.out.print("Cost Associated:");
+        if (ActivitiesEnum.CIW_BUS == activity)
+            System.out.print("\t$2");
+        else if (ActivitiesEnum.CIW_FOOT == activity)
+            System.out.print("\t$1");
+        else if (ActivitiesEnum.MOUNTAINVIEW == activity)
+            System.out.print("\t"+surcharge);
     }
 
+    /**
+     * Calculates the time spent during the activity
+     * @param activity
+     */
     @Override
     public void durationSpent(ActivitiesEnum activity) {
         System.out.println();
-        if(ActivitiesEnum.CIW == activity)
-            System.out.println("Duration: \t\t\t30 mins");
+        if(ActivitiesEnum.CIW_BUS == activity || ActivitiesEnum.CIW_FOOT == activity)
+            System.out.println("Duration: \t\t\t"+durationCIW+ " mins");
         else if(ActivitiesEnum.MOUNTAINVIEW == activity)
-            System.out.println("Duration: \t\t\t45 mins");
+            System.out.println("Duration: \t\t\t"+durationMV+" mins");
     }
 
+    /**
+     * Calculates the energy consumed during the activity
+     * @param activity
+     */
     @Override
     public void effortUtilized(ActivitiesEnum activity) {
-        if(ActivitiesEnum.CIW == activity)
-            System.out.println("Efforts: \t\t\t3000 calories");
+        effortCIW = durationCIW * 1000;
+        effortMV = durationMV * 1000;
+        if(ActivitiesEnum.CIW_BUS == activity || ActivitiesEnum.CIW_FOOT == activity)
+            System.out.println("Efforts: \t\t\t"+effortCIW+" calories");
         else if(ActivitiesEnum.MOUNTAINVIEW == activity)
-            System.out.println("Efforts: \t\t\t4500 calories");
+            System.out.println("Efforts: \t\t\t"+effortMV+" calories");
     }
 }
