@@ -2,6 +2,8 @@ package studentOrientation.util;
 
 import static java.lang.Math.pow;
 
+import studentOrientation.driver.Driver;
+
 public class Cafeteria extends Activities {
     double co2consumed = Math.round(30*pow(10,-4) * 10000d)/10000d;
     int effortCIW, effortMV, durationCIW = 30, durationMV = 45;
@@ -13,9 +15,9 @@ public class Cafeteria extends Activities {
     @Override
     public void carbonFootprintUsed(ActivitiesEnum activity) {
         if(ActivitiesEnum.CIW_BUS == activity || ActivitiesEnum.CIW_FOOT == activity)
-            System.out.println("CarbonFootprint: \t"+co2consumed+" tonnes");
+            Driver.builder.append("CarbonFootprint: \t"+co2consumed+" tonnes\n");
         else if(ActivitiesEnum.MOUNTAINVIEW == activity)
-            System.out.println("CarbonFootprint: \t"+co2consumed+" tonnes");
+            Driver.builder.append("CarbonFootprint: \t"+co2consumed+" tonnes\n");
     }
     /**
      * Calculates the cost associated with the activity
@@ -23,13 +25,13 @@ public class Cafeteria extends Activities {
      */
     @Override
     public void costIncurred(ActivitiesEnum activity) {
-        System.out.print("Cost Associated:");
+        Driver.builder.append("Cost Associated:");
         if (ActivitiesEnum.CIW_BUS == activity)
-            System.out.print("\t$2");
+            Driver.builder.append("\t$2\n");
         else if (ActivitiesEnum.CIW_FOOT == activity)
-            System.out.print("\t$1");
+            Driver.builder.append("\t$1\n");
         else if (ActivitiesEnum.MOUNTAINVIEW == activity)
-            System.out.print("\t"+surcharge);
+            Driver.builder.append("\t$"+surcharge+"\n");
     }
 
     /**
@@ -38,11 +40,10 @@ public class Cafeteria extends Activities {
      */
     @Override
     public void durationSpent(ActivitiesEnum activity) {
-        System.out.println();
         if(ActivitiesEnum.CIW_BUS == activity || ActivitiesEnum.CIW_FOOT == activity)
-            System.out.println("Duration: \t\t\t"+durationCIW+ " mins");
+            Driver.builder.append("Duration: \t\t"+durationCIW+ " mins\n");
         else if(ActivitiesEnum.MOUNTAINVIEW == activity)
-            System.out.println("Duration: \t\t\t"+durationMV+" mins");
+            Driver.builder.append("Duration: \t\t"+durationMV+" mins\n");
     }
 
     /**
@@ -54,8 +55,9 @@ public class Cafeteria extends Activities {
         effortCIW = durationCIW * 1000;
         effortMV = durationMV * 1000;
         if(ActivitiesEnum.CIW_BUS == activity || ActivitiesEnum.CIW_FOOT == activity)
-            System.out.println("Efforts: \t\t\t"+effortCIW+" calories");
+            Driver.builder.append("Efforts: \t\t"+effortCIW+" calories\n");
         else if(ActivitiesEnum.MOUNTAINVIEW == activity)
-            System.out.println("Efforts: \t\t\t"+effortMV+" calories");
+            Driver.builder.append("Efforts: \t\t"+effortMV+" calories\n");
     }
 }
+

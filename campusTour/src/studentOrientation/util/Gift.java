@@ -1,5 +1,7 @@
 package studentOrientation.util;
 
+import studentOrientation.driver.Driver;
+
 import static java.lang.Math.pow;
 
 public class Gift extends Activities {
@@ -12,9 +14,9 @@ public class Gift extends Activities {
     @Override
     public void carbonFootprintUsed(ActivitiesEnum activity) {
         if(ActivitiesEnum.UNIVERSITYUNION_BUS == activity || ActivitiesEnum.UNIVERSITYUNION_FOOT == activity)
-            System.out.println("CarbonFootprint: \t"+co2consumed+" tonnes");
+            Driver.builder.append("CarbonFootprint: \t"+co2consumed+" tonnes\n");
         else if(ActivitiesEnum.EVENTCENTER_BUS == activity || ActivitiesEnum.EVENTCENTER_FOOT == activity)
-            System.out.println("CarbonFootprint: \t"+co2consumed+" tonnes");
+            Driver.builder.append("CarbonFootprint: \t"+co2consumed+" tonnes\n");
     }
 
     /**
@@ -23,15 +25,15 @@ public class Gift extends Activities {
      */
     @Override
     public void costIncurred(ActivitiesEnum activity) {
-        System.out.print("Cost Associated:");
+        Driver.builder.append("Cost Associated:");
         if (ActivitiesEnum.UNIVERSITYUNION_BUS == activity)
-            System.out.print("\t$1");
+            Driver.builder.append("\t$1\n");
         else if (ActivitiesEnum.UNIVERSITYUNION_FOOT == activity)
-            System.out.print("\t$0.5");
+            Driver.builder.append("\t$0.5\n");
         else if (ActivitiesEnum.EVENTCENTER_BUS == activity)
-            System.out.print("\t$2");
+            Driver.builder.append("\t$2\n");
         else if (ActivitiesEnum.EVENTCENTER_FOOT == activity)
-            System.out.print("\t$1");
+            Driver.builder.append("\t$1\n");
 
     }
 
@@ -41,11 +43,10 @@ public class Gift extends Activities {
      */
     @Override
     public void durationSpent(ActivitiesEnum activity) {
-        System.out.println();
         if(ActivitiesEnum.UNIVERSITYUNION_BUS == activity || ActivitiesEnum.UNIVERSITYUNION_FOOT == activity)
-            System.out.println("Duration: \t\t\t"+duration+" mins");
+            Driver.builder.append("Duration: \t\t"+duration+" mins\n");
         else if(ActivitiesEnum.EVENTCENTER_BUS == activity || ActivitiesEnum.EVENTCENTER_FOOT == activity)
-            System.out.println("Duration: \t\t\t"+duration+" mins");
+            Driver.builder.append("Duration: \t\t"+duration+" mins\n");
     }
 
     /**
@@ -56,8 +57,8 @@ public class Gift extends Activities {
     public void effortUtilized(ActivitiesEnum activity) {
         effort = duration * 1000;
         if(ActivitiesEnum.UNIVERSITYUNION_BUS == activity || ActivitiesEnum.UNIVERSITYUNION_FOOT == activity)
-            System.out.println("Efforts: \t\t\t"+effort+" calories");
+            Driver.builder.append("Efforts: \t\t"+effort+" calories\n\n");
         else if(ActivitiesEnum.EVENTCENTER_BUS == activity || ActivitiesEnum.EVENTCENTER_FOOT == activity)
-            System.out.println("Efforts: \t\t\t"+effort+" calories");
+            Driver.builder.append("Efforts: \t\t"+effort+" calories\n\n");
     }
 }

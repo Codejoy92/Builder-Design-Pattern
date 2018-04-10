@@ -1,6 +1,7 @@
 package studentOrientation.util;
 
 import studentOrientation.activityInterfaces.ScheduleI;
+import studentOrientation.driver.Driver;
 
 public class Schedule implements ScheduleI {
 
@@ -19,10 +20,14 @@ public class Schedule implements ScheduleI {
 	 * This method is paramterized constructor and is used to filter out the
 	 * arguments for each activity and assign them to the global variables
 	 *
-	 * @param ActivitiesEnum value1
-	 * @param ActivitiesEnum value2
-	 * @param ActivitiesEnum value3
-	 * @param ActivitiesEnum  value4
+	 * @param ActivitiesEnum
+	 *            value1
+	 * @param ActivitiesEnum
+	 *            value2
+	 * @param ActivitiesEnum
+	 *            value3
+	 * @param ActivitiesEnum
+	 *            value4
 	 *
 	 */
 	public Schedule(ActivitiesEnum value1, ActivitiesEnum value2, ActivitiesEnum value3, ActivitiesEnum value4) {
@@ -166,8 +171,16 @@ public class Schedule implements ScheduleI {
 	 */
 	@Override
 	public void createBuilding() {
+		Driver.builder.append("Building: ");
+		if (ActivitiesEnum.WATSON_BUS == building)
+			Driver.builder.append("WATSON (BY BUS)\n");
+		if (ActivitiesEnum.WATSON_FOOT == building)
+			Driver.builder.append("WATSON (BY FOOT)\n");
+		if (ActivitiesEnum.SOM_BUS == building)
+			Driver.builder.append("SOM (BY BUS)\n");
+		if (ActivitiesEnum.SOM_FOOT == building)
+			Driver.builder.append("SOM (BY FOOT)\n");
 		Building build = new Building();
-		System.out.println("Building: " + building);
 		build.carbonFootprintUsed(building);
 		build.costIncurred(building);
 		build.durationSpent(building);
@@ -180,9 +193,16 @@ public class Schedule implements ScheduleI {
 	 */
 	@Override
 	public void createGift() {
-		System.out.println();
 		Gift g = new Gift();
-		System.out.println("Gift: " + gift);
+		Driver.builder.append("Gift: ");
+		if (ActivitiesEnum.EVENTCENTER_BUS == gift)
+			Driver.builder.append("EVENT CENTER (BY BUS)\n");
+		if (ActivitiesEnum.EVENTCENTER_FOOT == gift)
+			Driver.builder.append("EVENT CENTER (BY FOOT)\n");
+		if (ActivitiesEnum.UNIVERSITYUNION_FOOT == gift)
+			Driver.builder.append("UNIVERSITY UNION (BY FOOT)\n");
+		if (ActivitiesEnum.UNIVERSITYUNION_BUS == gift)
+			Driver.builder.append("UNIVERSITY UNION (BY BUS)\n");
 		g.carbonFootprintUsed(gift);
 		g.costIncurred(gift);
 		g.durationSpent(gift);
@@ -195,9 +215,14 @@ public class Schedule implements ScheduleI {
 	 */
 	@Override
 	public void createLecture() {
-		System.out.println();
+		Driver.builder.append("Lecture: ");
 		Lecture lect = new Lecture();
-		System.out.println("Lecture: " + lecture);
+		if (ActivitiesEnum.CS240_BUS == lecture)
+			Driver.builder.append("CS240 (BY BUS)\n");
+		if (ActivitiesEnum.CS240_FOOT == lecture)
+			Driver.builder.append("CS240 (BY FOOT)\n");
+		if (ActivitiesEnum.CS350 == lecture)
+			Driver.builder.append("CS350 (ONLINE)\n");
 		lect.carbonFootprintUsed(lecture);
 		lect.costIncurred(lecture);
 		lect.durationSpent(lecture);
@@ -209,9 +234,14 @@ public class Schedule implements ScheduleI {
 	 */
 	@Override
 	public void createCafeteria() {
-		System.out.println();
+		Driver.builder.append("Cafeteria: ");
+		if (ActivitiesEnum.CIW_BUS == cafeteria)
+			Driver.builder.append("CIW (BY BUS)\n");
+		else if (ActivitiesEnum.CIW_FOOT == cafeteria)
+			Driver.builder.append("CIW (BY FOOT)\n");
+		else if (ActivitiesEnum.MOUNTAINVIEW == cafeteria)
+			Driver.builder.append("MOUNTAIN VIEW\n");
 		Cafeteria cafe = new Cafeteria();
-		System.out.println("Cafeteria: " + cafeteria);
 		cafe.carbonFootprintUsed(cafeteria);
 		cafe.costIncurred(cafeteria);
 		cafe.durationSpent(cafeteria);
