@@ -9,7 +9,7 @@ public class Gift extends Activities {
     double co2consumed = Math.round(15*pow(10,-4) * 10000d)/10000d;
     /**
      * Calculates the Carbon Footprint for the activity
-     * @param activity
+     * @param activity activity
      */
     @Override
     public void carbonFootprintUsed(ActivitiesEnum activity) {
@@ -21,7 +21,7 @@ public class Gift extends Activities {
 
     /**
      * Calculates the cost associated with the activity
-     * @param activity
+     * @param activity activity
      */
     @Override
     public void costIncurred(ActivitiesEnum activity) {
@@ -39,7 +39,7 @@ public class Gift extends Activities {
 
     /**
      * Calculates the time spent during the activity
-     * @param activity
+     * @param activity activity
      */
     @Override
     public void durationSpent(ActivitiesEnum activity) {
@@ -51,7 +51,7 @@ public class Gift extends Activities {
 
     /**
      * Calculates the energy consumed during the activity
-     * @param activity
+     * @param activity activity
      */
     @Override
     public void effortUtilized(ActivitiesEnum activity) {

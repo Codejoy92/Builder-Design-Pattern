@@ -43,6 +43,21 @@
            optimize="on"
            deprecation="off"/>
   </target>
+  <target name="javadocs" depends="prepare">
+   <mkdir dir="javadocs"/>
+
+   <javadoc packagenames="studentOrientation.*"
+            sourcepath="${src}"
+            destdir="javadocs"
+            classpath="${classes}"
+            author="true"
+            version="true"
+            use="true"
+            windowtitle="API"
+           />
+
+</target>
+
 
 <target name="run" depends="jar">
         <java jar="${BUILD}/jar/campusTour.jar"  fork="true">

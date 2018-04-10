@@ -10,7 +10,7 @@ public class Cafeteria extends Activities {
     double surcharge = 2 + 2*0.05;
     /**
      * Calculates the Carbon Footprint for the activity
-     * @param activity
+     * @param activity activity
      */
     @Override
     public void carbonFootprintUsed(ActivitiesEnum activity) {
@@ -21,7 +21,7 @@ public class Cafeteria extends Activities {
     }
     /**
      * Calculates the cost associated with the activity
-     * @param activity
+     * @param activity activity
      */
     @Override
     public void costIncurred(ActivitiesEnum activity) {
@@ -36,7 +36,7 @@ public class Cafeteria extends Activities {
 
     /**
      * Calculates the time spent during the activity
-     * @param activity
+     * @param activity activity
      */
     @Override
     public void durationSpent(ActivitiesEnum activity) {
@@ -48,7 +48,7 @@ public class Cafeteria extends Activities {
 
     /**
      * Calculates the energy consumed during the activity
-     * @param activity
+     * @param activity activity
      */
     @Override
     public void effortUtilized(ActivitiesEnum activity) {

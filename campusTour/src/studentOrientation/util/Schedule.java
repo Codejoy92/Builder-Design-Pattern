@@ -20,14 +20,10 @@ public class Schedule implements ScheduleI {
 	 * This method is paramterized constructor and is used to filter out the
 	 * arguments for each activity and assign them to the global variables
 	 *
-	 * @param ActivitiesEnum
-	 *            value1
-	 * @param ActivitiesEnum
-	 *            value2
-	 * @param ActivitiesEnum
-	 *            value3
-	 * @param ActivitiesEnum
-	 *            value4
+	 * @param value1 value1
+	 * @param value2 value2
+	 * @param value3 value3
+	 * @param value4 value4
 	 *
 	 */
 	public Schedule(ActivitiesEnum value1, ActivitiesEnum value2, ActivitiesEnum value3, ActivitiesEnum value4) {
@@ -140,6 +136,7 @@ public class Schedule implements ScheduleI {
 
 	/**
 	 * This method is used to get Cafeteria value
+	 * @return cafeteria
 	 */
 	public ActivitiesEnum getCafeteria() {
 		return cafeteria;
@@ -147,6 +144,7 @@ public class Schedule implements ScheduleI {
 
 	/**
 	 * This method is used to get Lecture value
+	 * @return lecture
 	 */
 	public ActivitiesEnum getLecture() {
 		return lecture;
@@ -154,6 +152,7 @@ public class Schedule implements ScheduleI {
 
 	/**
 	 * This method is used to get Gift Shop value
+	 * @return gift
 	 */
 	public ActivitiesEnum getGift() {
 		return gift;
@@ -161,6 +160,7 @@ public class Schedule implements ScheduleI {
 
 	/**
 	 * This method is used to get Building value
+	 * @return building
 	 */
 	public ActivitiesEnum getBuilding() {
 		return building;
